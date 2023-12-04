@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #ffffff;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #3c4d67;
+    border-radius: 100vh;
+    border: 2px solid #ffffff;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #313e51;
+  }
+}
