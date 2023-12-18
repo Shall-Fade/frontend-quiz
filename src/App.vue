@@ -1,11 +1,13 @@
 <template>
-  <div
-    class="bg-medium-grey font-montserrat min-h-screen h-full text-[20px] font-normal text-white"
-  >
-    <TheHeader />
-    <main class="pb-[80px]">
-      <router-view></router-view>
-    </main>
+  <div :class="[dark ? 'dark' : '']">
+    <div
+      class="bg-[#F4FFF8] dark:bg-medium-grey font-montserrat min-h-screen h-full text-[20px] font-normal text-[#1C3738] dark:text-white"
+    >
+      <TheHeader />
+      <main class="pb-[80px]">
+        <router-view></router-view>
+      </main>
+    </div>
   </div>
 </template>
 
@@ -16,7 +18,5 @@ import { computed } from "vue";
 
 // Variables
 const store = useStore();
-const isLight = computed(() => {
-  store.state.isLight;
-});
+const dark = computed(() => store.state.dark);
 </script>

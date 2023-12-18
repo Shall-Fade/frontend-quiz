@@ -5,7 +5,7 @@
         currentQuestionIndex
       ].answerOptions"
       @click="addAnswer(answer)"
-      :class="[answer === selectedAnswer ? 'bg-purple/[40%]' : '']"
+      :class="[answer === selectedAnswer ? 'bg-[#CBD2CC] dark:bg-purple/[40%]' : '']"
     >
       <template v-slot:number>{{
         index == 0
@@ -22,7 +22,8 @@
     </QuestionListItem>
     <button
       @click="submitQuestion()"
-      class="font-bold text-center p-[25px] w-full flex items-center justify-center rounded-[20px] bg-purple mt-[15px]"
+      class="font-bold text-center p-[25px] w-full flex items-center justify-center rounded-[20px] bg-[#CBD2CC] dark:bg-purple mt-[15px]"
+      type="button"
     >
       Submit answer
     </button>
@@ -32,7 +33,7 @@
 <script setup>
 import QuestionListItem from "./QuestionListItem.vue";
 import { useStore } from "vuex";
-import { computed, onMounted, ref } from "vue";
+import { computed, ref } from "vue";
 
 // Variables
 import router from "../router";
@@ -41,16 +42,6 @@ const currentQuestionIndex = computed(() => store.state.currentQuestionIndex);
 const result = computed(() => store.state.result);
 const props = defineProps(["currentQuestions", "isLoading"]);
 const selectedAnswer = ref(null);
-
-onMounted(() => {
-  setTimeout(() => {
-    console.log(
-      props.currentQuestions.questions[currentQuestionIndex.value].correct
-    );
-    console.log(props.currentQuestions.questions.length);
-    console.log(currentQuestionIndex.value);
-  }, 2000);
-});
 
 // Add Answer
 function addAnswer(answer) {

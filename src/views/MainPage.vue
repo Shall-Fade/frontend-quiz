@@ -7,7 +7,7 @@
         Welcome to the
         <span class="block font-bold leading-normal">Frontend Quiz!</span>
       </h1>
-      <span class="text-[16px] text-casper italic"
+      <span class="text-[16px] text-[#354040] dark:text-casper italic"
         >Pick a subject to get started.</span
       >
     </div>

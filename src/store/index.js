@@ -2,7 +2,7 @@ import { createStore } from "vuex";
 
 const store = createStore({
   state: {
-    isLight: false,
+    dark: true,
     quizzesList: [
       {
         title: "HTML",
@@ -12,30 +12,30 @@ const store = createStore({
             answerOptions: [
               "Язык гипертекстовой разметки",
               "Не знаю",
-              "Какой-то там язык",
+              "Таблица стилей",
               "Язык программирования",
             ],
             correct: "Язык гипертекстовой разметки",
           },
           {
-            question: "Что такое HTML 2?",
+            question: "Какой тег используется для создания ссылки?",
             answerOptions: [
-              "Язык гипертекстовой разметки",
-              "Не знаю 3",
-              "Какой-то там язык 5",
-              "Язык программирования 6",
+              "<h4></h4>",
+              "Такого тега не существует",
+              "<img>",
+              "<a></a>",
             ],
-            correct: "Язык гипертекстовой разметки",
+            correct: "<a></a>",
           },
           {
-            question: "Что такое HTML 3?",
+            question: "Что такое тег?",
             answerOptions: [
-              "Язык гипертекстовой разметки",
-              "Не знаю",
-              "Какой-то там язык",
+              "Это не относится к HTML",
+              "Встроенная функция JavaScript",
+              "Элемент языка разметки гипертекста",
               "Язык программирования",
             ],
-            correct: "Язык гипертекстовой разметки",
+            correct: "Элемент языка разметки гипертекста",
           },
         ],
       },
@@ -43,59 +43,59 @@ const store = createStore({
         title: "Javascript",
         questions: [
           {
-            question: "Что такое HTML?",
+            question: "Что такое JavaScript?",
             answerOptions: [
               "Язык гипертекстовой разметки",
-              "Не знаю",
-              "Какой-то там язык",
               "Язык программирования",
+              "Таблица стилей",
+              "CMS",
             ],
-            correct: "Язык гипертекстовой разметки",
+            correct: "Язык программирования",
           },
           {
-            question: "Что такое HTML?",
+            question: "Какая функция в JavaScript выводит сообщения в консоль?",
             answerOptions: [
-              "Язык гипертекстовой разметки",
-              "Не знаю",
-              "Какой-то там язык",
-              "Язык программирования",
+              "write()",
+              "def()",
+              "print()",
+              "console.log()",
             ],
-            correct: "Язык гипертекстовой разметки",
+            correct: "console.log()",
           },
           {
-            question: "Что такое HTML?",
+            question: "В каком стиле именуются переменные в JS?",
             answerOptions: [
-              "Язык гипертекстовой разметки",
-              "Не знаю",
-              "Какой-то там язык",
-              "Язык программирования",
+              "kebab-case",
+              "camelCase",
+              "snake_case",
+              "PascalCase",
             ],
-            correct: "Язык гипертекстовой разметки",
+            correct: "camelCase",
           },
           {
-            question: "Что такое HTML 2?",
+            question: "Ключевое слово для создания цикла со счетчиком в JavaScript",
             answerOptions: [
-              "Язык гипертекстовой разметки",
-              "Не знаю",
-              "Какой-то там язык",
-              "Язык программирования",
+              "for",
+              "while",
+              "do while",
+              "if",
             ],
-            correct: "Язык гипертекстовой разметки",
+            correct: "for",
           },
           {
-            question: "Что такое HTML 3?",
+            question: "Какое ключевое слово лишнее (для создания переменной) в JavaScript?",
             answerOptions: [
-              "Язык гипертекстовой разметки",
-              "Не знаю",
-              "Какой-то там язык",
-              "Язык программирования",
+              "var",
+              "let",
+              "create",
+              "const",
             ],
-            correct: "Язык гипертекстовой разметки",
+            correct: "create",
           },
         ],
       },
       {
-        title: "Adaptvie",
+        title: "Adaptive",
         questions: [
           {
             question: "Что такое HTML?",
@@ -135,8 +135,8 @@ const store = createStore({
           {
             question: "Что такое HTML?",
             answerOptions: [
-              "Язык гипертекстовой разметки",
               "Не знаю",
+              "Язык гипертекстовой разметки",
               "Какой-то там язык",
               "Язык программирования",
             ],
@@ -221,8 +221,8 @@ const store = createStore({
     result: 0,
   },
   mutations: {
-    TOGGLE_THEME(state, isLight) {
-      state.isLight = isLight;
+    TOGGLE_THEME(state, dark) {
+      state.dark = dark;
     },
     GET_CHOOSE_QUIZ(state, selectedQuiz) {
       state.selectedQuiz = selectedQuiz;

@@ -8,23 +8,23 @@
         class="flex items-center gap-x-[5px] text-[16px] mb-[25px]"
         type="button"
       >
-        <span class="material-symbols-outlined text-white text-[20px]"
+        <span class="material-symbols-outlined text-[#1C3738] dark:text-white text-[20px]"
           >keyboard_backspace</span
         >
         Back
       </button>
-      <span class="block text-[16px] text-casper italic mb-[35px]"
+      <span class="block text-[16px] text-[#354040] dark:text-casper italic mb-[35px]"
         >Question {{ currentQuestionIndex + 1 }} of
         {{ currentQuestions.questions.length }}</span
       >
-      <h2 class="text-[32px] font-bold text-white">
+      <h2 class="text-[32px] font-bold dark:text-white">
         {{ currentQuestions.questions[currentQuestionIndex].question }}
       </h2>
       <div
-        class="flex items-center relative h-[15px] rounded-[35px] bg-light-grey mt-[100px] w-full"
+        class="flex items-center relative h-[15px] rounded-[35px] bg-[#DAEAE6] dark:bg-light-grey mt-[100px] w-full"
       >
         <div
-          class="border-light-grey h-full bg-purple rounded-[35px] border-[4px]"
+          class="border-[#DAEAE6] dark:border-light-grey h-full bg-[#A1A4A0] dark:bg-purple rounded-[35px] border-[4px]"
           :style="`width: ${Math.round(
             100 /
               (currentQuestions.questions.length / (currentQuestionIndex + 1))

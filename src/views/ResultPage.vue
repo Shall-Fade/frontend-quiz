@@ -2,12 +2,12 @@
   <section class="max-w-[1280px] px-[40px] mx-auto my-0 w-full">
     <div class="flex items-center flex-col justify-center">
       <span class="text-[72px] font-bold mb-[20px]"
-        >{{ result }} <span class="text-[42px] text-casper">of</span>
+        >{{ result }} <span class="text-[42px] text-[#354040] dark:text-casper">of</span>
         {{ questionsLength }}</span
       >
       <span class="text-[20px] font-bold mb-[60px]">{{ commentOutput() }}</span>
       <button
-        class="p-[20px] flex items-center rounded-[20px] bg-purple cursor-pointer transition duration-150 hover:opacity-[70%] text-white font-bold text-[20px]"
+        class="p-[20px] flex items-center rounded-[20px] bg-[#CBD2CC] dark:bg-purple cursor-pointer transition duration-150 hover:opacity-[70%] dark:text-white font-bold text-[20px]"
         @click="$router.push('/')"
         type="button"
       >
@@ -40,6 +40,7 @@ const store = useStore();
 const result = computed(() => store.state.result);
 const questionsLength = computed(() => store.state.questionsLength);
 
+// Get a comment on the result
 function commentOutput() {
   if (Math.round((result.value / questionsLength.value) * 100) <= 40) {
     return "Bad, try again";
