@@ -5,7 +5,7 @@
         currentQuestionIndex
       ].answerOptions"
       @click="addAnswer(answer)"
-      :class="[answer === selectedAnswer ? 'bg-[#CBD2CC] dark:bg-purple/[40%]' : '']"
+      :class="[answer === selectedAnswer ? 'bg-[#CBD2CC]/40 dark:bg-purple/[40%]' : '']"
     >
       <template v-slot:number>{{
         index == 0
@@ -54,8 +54,6 @@ function submitQuestion() {
     currentQuestionIndex.value + 1 <
     props.currentQuestions.questions.length
   ) {
-    store.commit("SUBMIT_QUESTION", currentQuestionIndex.value + 1);
-
     if (
       selectedAnswer.value ===
       props.currentQuestions.questions[currentQuestionIndex.value].correct
@@ -63,6 +61,7 @@ function submitQuestion() {
       store.commit("GET_CORRECT_ANSWER", result.value + 1);
     }
 
+    store.commit("SUBMIT_QUESTION", currentQuestionIndex.value + 1);
     selectedAnswer.value = null;
   } else {
     router.push("/result");
