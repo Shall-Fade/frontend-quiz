@@ -4,7 +4,7 @@
       class="bg-[#F4FFF8] dark:bg-medium-grey font-montserrat min-h-screen h-full text-[20px] font-normal text-[#1C3738] dark:text-white"
     >
       <TheHeader />
-      <main class="pb-[80px]">
+      <main class="pb-[30px] xl:pb-[80px] lg:pb-[60px] md:pb-[40px]">
         <router-view></router-view>
       </main>
     </div>

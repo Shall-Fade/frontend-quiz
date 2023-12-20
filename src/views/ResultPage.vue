@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-[1280px] px-[40px] mx-auto my-0 w-full">
+  <section class="max-w-[1280px] px-[20px] xl:px-[40px] lg:px-[30px] md:px-[30px] mx-auto my-0 w-full">
     <div class="flex items-center flex-col justify-center">
       <span class="text-[72px] font-bold mb-[20px]"
         >{{ result }} <span class="text-[42px] text-[#354040] dark:text-casper">of</span>

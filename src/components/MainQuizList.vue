@@ -1,6 +1,6 @@
 <template>
   <ul
-    class="relative max-w-[50%] w-full flex flex-col gap-y-[15px] max-h-[500px] overflow-y-auto custom-scrollbar h-full"
+    class="relative md:max-w-[50%] w-full flex flex-col gap-y-[15px] max-h-[500px] overflow-y-auto custom-scrollbar h-full"
   >
     <li v-for="quiz in quizzesList">
       <router-link @click="chooseQuiz(quiz.title)" :to="{ path: `/quiz/${quiz.title}` }">

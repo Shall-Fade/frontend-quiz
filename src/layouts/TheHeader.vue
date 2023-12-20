@@ -1,11 +1,11 @@
 <template>
   <header
-    class="max-w-[1280px] px-[40px] mx-auto my-0 w-full flex items-center justify-between py-[80px]"
+    class="max-w-[1280px] px-[20px] xl:px-[40px] lg:px-[30px] md:px-[30px] mx-auto my-0 w-full flex items-center justify-between py-[30px] xl:py-[80px] lg:py-[60px] md:py-[40px]"
   >
     <div>
-      <div v-if="selectedQuiz !== ''" class="flex items-center gap-x-[25px]">
+      <div v-if="selectedQuiz !== ''" class="flex items-center gap-x-[15px] md:gap-x-[25px]">
         <span
-          class="w-[50px] h-[50px] rounded-[8px] flex items-center justify-center bg-[#C0D5D3] dark:bg-medium-grey"
+          class="w-[25px] md:w-[50px] h-[25px] md:h-[50px] rounded-[8px] flex items-center justify-center bg-[#C0D5D3] dark:bg-medium-grey"
         >
           <img src="../assets/vue.svg" alt="" />
         </span>

@@ -1,9 +1,11 @@
 <template>
   <section
-    class="max-w-[1280px] px-[40px] mx-auto my-0 w-full flex items-start justify-between gap-x-[80px]"
+    class="max-w-[1280px] px-[20px] xl:px-[40px] lg:px-[30px] md:px-[30px] mx-auto my-0 w-full flex items-start justify-between flex-col md:flex-row gap-x-[20px] xl:gap-x-[80px] lg:gap-x-[40px]"
   >
-    <div class="max-w-[50%] w-full">
-      <h1 class="text-[62px] font-normal leading-none mb-[30px]">
+    <div class="md:max-w-[50%] w-full text-center md:text-start mb-[30px] md:mb-0">
+      <h1
+        class="text-[32px] xl:text-[62px] lg:text-[52px] md:text-[38px] font-normal leading-none mb-[15px] md:mb-[30px]"
+      >
         Welcome to the
         <span class="block font-bold leading-normal">Frontend Quiz!</span>
       </h1>

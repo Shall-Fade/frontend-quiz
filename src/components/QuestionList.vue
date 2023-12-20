@@ -1,11 +1,11 @@
 <template>
-  <div v-if="isLoading" class="max-w-[50%] w-full flex flex-col gap-y-[15px]">
+  <div v-if="isLoading" class="md:max-w-[50%] w-full flex flex-col gap-y-[15px]">
     <QuestionListItem
       v-for="(answer, index) in props.currentQuestions.questions[
         currentQuestionIndex
       ].answerOptions"
       @click="addAnswer(answer)"
-      :class="[answer === selectedAnswer ? 'bg-[#CBD2CC]/40 dark:bg-purple/[40%]' : '']"
+      :class="[answer === selectedAnswer ? 'bg-[#CBD2CC] dark:bg-purple/[40%]' : '']"
     >
       <template v-slot:number>{{
         index == 0
