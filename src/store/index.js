@@ -1,4 +1,5 @@
 import { createStore } from "vuex";
+import createPersistedState from "vuex-persistedstate";
 
 const store = createStore({
   state: {
@@ -6,6 +7,7 @@ const store = createStore({
     quizzesList: [
       {
         title: "HTML",
+        image: "html",
         questions: [
           {
             question: "Что такое HTML?",
@@ -41,6 +43,7 @@ const store = createStore({
       },
       {
         title: "Javascript",
+        image: "js",
         questions: [
           {
             question: "Что такое JavaScript?",
@@ -96,6 +99,7 @@ const store = createStore({
       },
       {
         title: "Adaptive",
+        image: "responsive",
         questions: [
           {
             question: "Что такое HTML?",
@@ -131,6 +135,7 @@ const store = createStore({
       },
       {
         title: "CSS",
+        image: "css",
         questions: [
           {
             question: "Что такое HTML?",
@@ -237,6 +242,7 @@ const store = createStore({
       state.questionsLength = questionsLength;
     },
   },
+  plugins: [createPersistedState()],
 });
 
 export default store;

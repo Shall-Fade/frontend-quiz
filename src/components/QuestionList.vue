@@ -5,7 +5,7 @@
         currentQuestionIndex
       ].answerOptions"
       @click="addAnswer(answer)"
-      :class="[answer === selectedAnswer ? 'bg-[#CBD2CC] dark:bg-purple/[40%]' : '']"
+      :class="[answer === selectedAnswer ? 'bg-[#aeb6af65] dark:bg-purple/[40%]' : '']"
     >
       <template v-slot:number>{{
         index == 0

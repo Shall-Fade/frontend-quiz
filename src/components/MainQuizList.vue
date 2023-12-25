@@ -6,7 +6,7 @@
       <router-link @click="chooseQuiz(quiz.title)" :to="{ path: `/quiz/${quiz.title}` }">
         <MainQuizListItem>
           <template v-slot:image>
-            <img src="../assets/vue.svg" :alt="quiz.title" />
+            <img :src="[`images/${quiz.image}-icon.svg`]" :alt="quiz.title" />
           </template>
           <template v-slot:title>{{ quiz.title }}</template>
         </MainQuizListItem>

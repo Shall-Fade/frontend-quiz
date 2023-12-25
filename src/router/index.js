@@ -19,11 +19,11 @@ const router = createRouter({
       component: ResultPage,
     },
   ],
+  scrollBehavior() {
+    document.getElementById("app").scrollIntoView();
+  },
   linkActiveClass:
     "text-teal laptop:underline laptop:decoration-teal laptop:underline-offset-8",
-  scrollBehavior(to, from, savedPosition) {
-    return { x: 0, y: 0 };
-  },
 });
 
 export default router;

@@ -14,7 +14,7 @@
 <script setup>
 import TheHeader from "./layouts/TheHeader.vue";
 import { useStore } from "vuex";
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 
 // Variables
 const store = useStore();
